@@ -9,6 +9,8 @@ Requires MacRuby 0.5 beta 2.
 
 ## Notes
 
+37signals Menu authenticates using the system's shared cookie storage, so make sure you're logged into your Backpack account with Safari first.
+
 You'll need to change the value of the `BackpackAccountName` property in `Info.plist` to your Backpack account's subdomain before building.
 
 The "New Journal Entry" command is currently unimplemented.
