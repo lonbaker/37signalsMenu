@@ -1,6 +1,7 @@
 class StatusView < NSView
   def viewDidMoveToWindow
     if window
+      window.makeKeyAndOrderFront(self)
       startTimer
     else
       stopTimer
