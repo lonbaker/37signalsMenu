@@ -52,6 +52,34 @@
 			sepNavVisRange = "{0, 1112}";
 		};
 	};
+	22A5C65510C9DA4A0081DA40 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 22A5C64E10C9D9980081DA40 /* 37signals Menu.icns */;
+	};
+	22A5C65610C9DA4A0081DA40 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIconFile,
+		);
+		name = "/Users/sam/Projects/37signals Menu/Info.plist";
+		rLen = 0;
+		rLoc = 0;
+	};
+	22A5C66410C9DB450081DA40 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIdentifier,
+		);
+		name = "/Users/sam/Projects/37signals Menu/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
 	22D8254610C3AD4B00213243 /* JournalEntryController.rb */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {747, 510}}";
@@ -119,7 +147,7 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = 22DFB74110C320E5007292FD /* 37signals Menu */;
 		activeTarget = 8D1107260486CEB800E47090 /* 37signals Menu */;
 		addToTargets = (
@@ -152,8 +180,13 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 281648207;
-			PBXWorkspaceStateSaveDate = 281648207;
+			PBXPerProjectTemplateStateSaveDate = 281663881;
+			PBXWorkspaceStateSaveDate = 281663881;
+		};
+		perUserProjectItems = {
+			22A5C65510C9DA4A0081DA40 /* PBXBookmark */ = 22A5C65510C9DA4A0081DA40 /* PBXBookmark */;
+			22A5C65610C9DA4A0081DA40 /* PlistBookmark */ = 22A5C65610C9DA4A0081DA40 /* PlistBookmark */;
+			22A5C66410C9DB450081DA40 /* PlistBookmark */ = 22A5C66410C9DB450081DA40 /* PlistBookmark */;
 		};
 		sourceControlManager = 22DFB74F10C32103007292FD /* Source Control */;
 		userBuildSettings = {
@@ -184,5 +217,10 @@
 		executables = (
 			22DFB74110C320E5007292FD /* 37signals Menu */,
 		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 485}, {858, 688}}";
+		};
 	};
 }

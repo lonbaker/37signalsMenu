@@ -50,6 +50,7 @@
 		2266DBE310C6E68E00327A2B /* JournalEntry.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2266DBE210C6E68E00327A2B /* JournalEntry.rb */; };
 		2281008210C9034C00E655CF /* StatusView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2281008110C9034C00E655CF /* StatusView.rb */; };
 		2281012E10C9950800E655CF /* xmlsimple.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2281012D10C9950800E655CF /* xmlsimple.rb */; };
+		22A5C64F10C9D9980081DA40 /* 37signals Menu.icns in Resources */ = {isa = PBXBuildFile; fileRef = 22A5C64E10C9D9980081DA40 /* 37signals Menu.icns */; };
 		22D8253F10C3A28800213243 /* JournalEntry.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D8253E10C3A28800213243 /* JournalEntry.xib */; };
 		22D8254710C3AD4B00213243 /* JournalEntryController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 22D8254610C3AD4B00213243 /* JournalEntryController.rb */; };
 		22DFB75310C32107007292FD /* MenuOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 22DFB75110C32107007292FD /* MenuOff.png */; };
@@ -89,6 +90,7 @@
 		2266DBE210C6E68E00327A2B /* JournalEntry.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = JournalEntry.rb; sourceTree = "<group>"; };
 		2281008110C9034C00E655CF /* StatusView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = StatusView.rb; sourceTree = "<group>"; };
 		2281012D10C9950800E655CF /* xmlsimple.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = xmlsimple.rb; sourceTree = "<group>"; };
+		22A5C64E10C9D9980081DA40 /* 37signals Menu.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "37signals Menu.icns"; sourceTree = "<group>"; };
 		22D8253E10C3A28800213243 /* JournalEntry.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JournalEntry.xib; sourceTree = "<group>"; };
 		22D8254610C3AD4B00213243 /* JournalEntryController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = JournalEntryController.rb; sourceTree = "<group>"; };
 		22DFB75110C32107007292FD /* MenuOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuOff.png; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22A5C64E10C9D9980081DA40 /* 37signals Menu.icns */,
 				22DFB75110C32107007292FD /* MenuOff.png */,
 				22DFB75210C32107007292FD /* MenuOn.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -302,6 +305,7 @@
 				2266DBE310C6E68E00327A2B /* JournalEntry.rb in Resources */,
 				2281008210C9034C00E655CF /* StatusView.rb in Resources */,
 				2281012E10C9950800E655CF /* xmlsimple.rb in Resources */,
+				22A5C64F10C9D9980081DA40 /* 37signals Menu.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
