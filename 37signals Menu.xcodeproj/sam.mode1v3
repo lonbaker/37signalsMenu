@@ -329,11 +329,11 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>22A5C66410C9DB450081DA40</string>
+										<string>22473F5610C9DF06006501C7</string>
 										<key>history</key>
 										<array>
 											<string>22A5C65510C9DA4A0081DA40</string>
-											<string>22A5C65610C9DA4A0081DA40</string>
+											<string>22A5C66410C9DB450081DA40</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -345,14 +345,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {808, 486}}</string>
+								<string>{{0, 0}, {808, 480}}</string>
 								<key>RubberWindowFrame</key>
 								<string>312 407 1016 719 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>486pt</string>
+							<string>480pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -365,14 +365,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 491}, {808, 187}}</string>
+								<string>{{0, 485}, {808, 193}}</string>
 								<key>RubberWindowFrame</key>
 								<string>312 407 1016 719 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>187pt</string>
+							<string>193pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -391,9 +391,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>22A5C64B10C9D9900081DA40</string>
+				<string>22473F5710C9DF06006501C7</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>22A5C64C10C9D9900081DA40</string>
+				<string>22473F5810C9DF06006501C7</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -531,10 +531,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>22A5C66010C9DA4A0081DA40</string>
-		<string>22A5C66110C9DA4A0081DA40</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>22DFB87410C3916D007292FD</string>
 		<string>/Users/sam/Projects/37signals Menu/37signals Menu.xcodeproj</string>
 	</array>
@@ -616,7 +612,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>22DFB87410C3916D007292FD</string>
-				<string>22A5C64D10C9D9900081DA40</string>
+				<string>22473F5910C9DF06006501C7</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

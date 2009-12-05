@@ -20,7 +20,7 @@ class MenuController
     @statusBarItemView.statusBarItem = @statusBarItem
     @statusBarItemView.menu = menu
     @statusBarItem.view = @statusBarItemView
-
+    
     startLoading
   end
   
@@ -65,8 +65,7 @@ class MenuController
     elsif resource == journalStatus
       statusTextField.stringValue = journalStatus.displayMessage
       statusInOut.selectedSegment = journalStatus.in? ? 0 : 1
-      adjustStatusTextField
-      statusMenuItem.view = statusManipulationView
+      updateStatusView
     end
   end
   
@@ -91,18 +90,25 @@ class MenuController
   def inOutClicked(sender)
     if sender.selectedSegment == 0
       journalStatus.in!
-      adjustStatusTextField(true)
+      updateStatusView
       statusTextField.selectText(0)
     else
       journalStatus.out!
-      adjustStatusTextField(false)
+      updateStatusView
       menu.cancelTracking
     end
   end
   
-  def adjustStatusTextField(editable = journalStatus.in?)
-    statusTextField.enabled = editable
-    statusTextField.editable = editable
-    statusTextField.selectable = editable
+  def updateStatusView
+    if journalStatus.in?
+      statusTextField.enabled = true
+      statusManipulationView.frameSize = [300, 88]
+    else
+      statusTextField.enabled = false
+      statusManipulationView.frameSize = [300, 22]
+    end
+    
+    statusMenuItem.view = statusManipulationView
+    statusManipulationView.display
   end
 end
