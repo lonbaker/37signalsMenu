@@ -1,6 +1,7 @@
 class MenuController
   attr_accessor :menu
   attr_accessor :statusMenuItem
+  attr_accessor :newJournalEntryMenuItem
   attr_accessor :progressIndicator
   attr_accessor :statusInitializationView
   attr_accessor :statusManipulationView
@@ -8,7 +9,6 @@ class MenuController
   attr_accessor :statusTextField
   
   attr_reader :identity
-  attr_reader :userID
   attr_reader :journalStatus
   
   def awakeFromNib
@@ -30,7 +30,9 @@ class MenuController
   end
   
   def newJournalEntry(sender)
-    NSBundle.loadNibNamed("JournalEntry", owner: JournalEntryController.new)
+    controller = JournalEntryController.new
+    controller.identity = identity
+    NSBundle.loadNibNamed("JournalEntry", owner: controller)
   end
   
   def openJournal(sender)
@@ -52,15 +54,14 @@ class MenuController
   
   def startLoadingJournalStatus
     @journalStatus = JournalStatus.resourceWithDelegate(self)
-    @journalStatus.userID = userID
+    @journalStatus.userID = identity.userID
     @journalStatus.load
   end
   
-  def backpackResource(resource, didChangeAttributesTo: attributes)
-    NSLog("backpackResource:didChangeAttributesTo: #{attributes.inspect}")
+  def backpackResource(resource, receivedRemoteAttributes: attributes)
     if resource == identity
-      @userID = identity.userID
       startLoadingJournalStatus
+      newJournalEntryMenuItem.enabled = true
       
     elsif resource == journalStatus
       statusTextField.stringValue = journalStatus.displayMessage

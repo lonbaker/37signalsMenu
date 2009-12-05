@@ -7,7 +7,7 @@ class BackpackResource
     def attribute(name)
       attribute_names << name
       define_method(name) do
-        attributes[name]
+        combinedAttributes[name]
       end
     end
     
@@ -24,48 +24,45 @@ class BackpackResource
     end
   end
   
-  attr_reader :attributes
   attr_accessor :delegate
-  
+
   def load
     unless @loading
       request(:get) do |response, body|
-        begin
-          if response.statusCode == 200
-            self.attributes = self.class.attributesFromXML(body)
-          elsif response.statusCode == 404
-            self.attributes = {}
-          end
-        ensure
-          @loading = false
+        if (200..299).include?(response.statusCode)
+          self.remoteAttributes = self.class.attributesFromXML(body)
         end
+        @loading = false
       end
       
       @loading = true
     end
   end
   
-  def update(newAttributes)
-    unless @updating
-      existingAttributes = attributes
-      self.attributes = attributes.merge(newAttributes)
+  def save
+    unless @saving
+      attributesAtSaveTime = combinedAttributes
 
-      request(:put, attributesAsXML) do |response|
-         if response.statusCode != 200
-           self.attributes = existingAttributes
-         end
-         @updating = false
+      request(methodForSave, attributesAsXML) do |response|
+        if (200..299).include?(response.statusCode)
+          self.remoteAttributes = attributesAtSaveTime
+        end
+        @saving = false
       end
       
-      @updating = true
+      @saving = true
     end
+  end
+
+  def update(newAttributes)
+    self.attributes = newAttributes
+    save
   end
 
   def request(method, body = "", &handler)
     raise ResourceBusyError if loading?
     @request = BackpackRequest.requestLocation(location, usingMethod: method, withBody: body, delegate: self)
     @handler = handler
-    NSLog("request(#{method.inspect}, #{body.inspect})")
     
     begin
       delegate.backpackResourceStartedLoading(self)
@@ -73,16 +70,38 @@ class BackpackResource
     end
   end
   
-  def attributes=(newAttributes)
-    @attributes = newAttributes
-    @lastModified = Time.now
+  def remoteAttributes
+    @remoteAttributes ||= {}
+  end
+  
+  def attributes
+    @attributes ||= {}
+  end
+  
+  def combinedAttributes
+    remoteAttributes.merge(attributes)
+  end
+  
+  def remoteAttributes=(newAttributes)
+    @remoteAttributes = newAttributes || {}
+    @remoteTimestamp = Time.now
 
     begin
-      delegate.backpackResource(self, didChangeAttributesTo: attributes)
+      delegate.backpackResource(self, receivedRemoteAttributes: remoteAttributes)
     rescue NoMethodError
     end
   end
   
+  def attributes=(newAttributes)
+    @attributes = combinedAttributes.merge(newAttributes)
+    @timestamp = Time.now
+
+    begin
+      delegate.backpackResource(self, changedAttributesTo: attributes)
+    rescue NoMethodError
+    end
+  end
+
   def backpackRequest(request, completedWithResponse: response, body: body)
     @handler.call(response, body)
   ensure

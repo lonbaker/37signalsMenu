@@ -12,7 +12,7 @@ class JournalStatus < BackpackResource
   end
   
   def message
-    attributes[:message].to_s
+    combinedAttributes[:message].to_s
   end
   
   def displayMessage
@@ -47,5 +47,9 @@ class JournalStatus < BackpackResource
 
   def location
     "users/#{userID}/status.xml"
+  end
+  
+  def methodForSave
+    :put
   end
 end

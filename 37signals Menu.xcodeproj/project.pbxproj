@@ -46,6 +46,7 @@
 		2218A6A510C4ADB100E8146E /* JournalStatus.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2218A6A410C4ADB100E8146E /* JournalStatus.rb */; };
 		2218A6A710C4B35600E8146E /* BackpackRequest.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2218A6A610C4B35600E8146E /* BackpackRequest.rb */; };
 		2218A6B210C4BD8500E8146E /* BackpackResource.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2218A6B110C4BD8500E8146E /* BackpackResource.rb */; };
+		22473FAF10C9FB7C006501C7 /* Journal Entry Saved.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22473FAE10C9FB7B006501C7 /* Journal Entry Saved.aiff */; };
 		2266DBE110C6E68500327A2B /* Identity.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2266DBE010C6E68500327A2B /* Identity.rb */; };
 		2266DBE310C6E68E00327A2B /* JournalEntry.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2266DBE210C6E68E00327A2B /* JournalEntry.rb */; };
 		2281008210C9034C00E655CF /* StatusView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2281008110C9034C00E655CF /* StatusView.rb */; };
@@ -86,6 +87,7 @@
 		2218A6A410C4ADB100E8146E /* JournalStatus.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = JournalStatus.rb; sourceTree = "<group>"; };
 		2218A6A610C4B35600E8146E /* BackpackRequest.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = BackpackRequest.rb; sourceTree = "<group>"; };
 		2218A6B110C4BD8500E8146E /* BackpackResource.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = BackpackResource.rb; sourceTree = "<group>"; };
+		22473FAE10C9FB7B006501C7 /* Journal Entry Saved.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "Journal Entry Saved.aiff"; sourceTree = "<group>"; };
 		2266DBE010C6E68500327A2B /* Identity.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Identity.rb; sourceTree = "<group>"; };
 		2266DBE210C6E68E00327A2B /* JournalEntry.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = JournalEntry.rb; sourceTree = "<group>"; };
 		2281008110C9034C00E655CF /* StatusView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = StatusView.rb; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22473FAE10C9FB7B006501C7 /* Journal Entry Saved.aiff */,
 				22A5C64E10C9D9980081DA40 /* 37signals Menu.icns */,
 				22DFB75110C32107007292FD /* MenuOff.png */,
 				22DFB75210C32107007292FD /* MenuOn.png */,
@@ -306,6 +309,7 @@
 				2281008210C9034C00E655CF /* StatusView.rb in Resources */,
 				2281012E10C9950800E655CF /* xmlsimple.rb in Resources */,
 				22A5C64F10C9D9980081DA40 /* 37signals Menu.icns in Resources */,
+				22473FAF10C9FB7C006501C7 /* Journal Entry Saved.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@ class JournalEntryController
     end
   end
 
-  attr_accessor :window, :textView, :button, :value
+  attr_accessor :identity, :window, :textView, :button, :value, :journalEntry
   
   def awakeFromNib
     NSApp.arrangeInFront(nil)
@@ -13,6 +13,7 @@ class JournalEntryController
     window.makeKeyAndOrderFront(nil)
     textView.font = NSFont.fontWithName("Lucida Grande", size: 14)
 
+    self.journalEntry = JournalEntry.resourceWithDelegate(self)
     JournalEntryController.instances.push(self)
   end
   
@@ -21,14 +22,22 @@ class JournalEntryController
   end
 
   def textDidChange(notification)
-    NSLog("text did change")
   end
   
   def textDidEndEditing(notification)
-    NSLog("text did end editing")
+  end
+  
+  def contentsOfMessageField
+    textView.textStorage.string
   end
   
   def addJournalEntry(sender)
-    NSLog("add journal entry")
+    window.close
+    journalEntry.identity = identity
+    journalEntry.update(body: contentsOfMessageField)
+  end
+
+  def backpackResource(resource, receivedRemoteAttributes: attributes)
+    NSSound.soundNamed("Journal Entry Saved").play
   end
 end

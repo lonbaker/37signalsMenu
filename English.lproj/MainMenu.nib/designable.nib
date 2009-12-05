@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="383"/>
 			<integer value="442"/>
+			<integer value="383"/>
 			<integer value="446"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -783,6 +783,7 @@
 					</object>
 					<object class="NSMenuItem" id="4459893">
 						<reference key="NSMenu" ref="585560608"/>
+						<bool key="NSIsDisabled">YES</bool>
 						<string key="NSTitle">New Journal Entry…</string>
 						<string key="NSKeyEquiv">j</string>
 						<int key="NSKeyEquivModMask">1310720</int>
@@ -1393,6 +1394,14 @@
 						<reference key="destination" ref="277289830"/>
 					</object>
 					<int key="connectionID">468</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">newJournalEntryMenuItem</string>
+						<reference key="source" ref="313142613"/>
+						<reference key="destination" ref="4459893"/>
+					</object>
+					<int key="connectionID">469</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2479,7 +2488,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>StatusView</string>
-					<string>{{140, 555}, {300, 22}}</string>
+					<string>{{195, 492}, {300, 22}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<real value="0.0"/>
 					<reference ref="5248462"/>
@@ -2554,7 +2563,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">468</int>
+			<int key="maxID">469</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2581,6 +2590,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>menu</string>
+							<string>newJournalEntryMenuItem</string>
 							<string>progressIndicator</string>
 							<string>statusInOut</string>
 							<string>statusInitializationView</string>
@@ -2590,6 +2600,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>

@@ -26,6 +26,8 @@ class BackpackRequest
 
     @connection = NSURLConnection.connectionWithRequest(@request, delegate: self)
     @responseBody = NSMutableData.data
+    
+    NSLog("#{@method} #{url.absoluteString}")
   end
   
   def url
@@ -37,13 +39,11 @@ class BackpackRequest
   end
   
   def connection(connection, didReceiveResponse: response)
-    NSLog("connection:didReceiveResponse:")
     @response = response
     @responseBody.length = 0
   end
   
   def connection(connection, didReceiveData: data)
-    NSLog("connection:didReceiveData:")
     @responseBody.appendData(data)
   end
   
