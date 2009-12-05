@@ -10,7 +10,7 @@ class StatusView < NSView
   def startTimer
     NSLog("startTimer")
     date = NSDate.dateWithTimeIntervalSinceNow(0)
-    @timer = NSTimer.alloc.initWithFireDate(date, interval: 0.2, target: self, selector: "timer:", userInfo: nil, repeats: true)
+    @timer = NSTimer.alloc.initWithFireDate(date, interval: 1.0, target: self, selector: "timer:", userInfo: nil, repeats: true)
     NSRunLoop.currentRunLoop.addTimer(@timer, forMode: NSEventTrackingRunLoopMode)
   end
   
