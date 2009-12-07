@@ -6,6 +6,10 @@
 # Copyright 37signals 2009. All rights reserved.
 #
 
+RESOURCES_PATH = File.dirname(__FILE__)
+BUNDLED_STDLIB_PATH = File.join(RESOURCES_PATH, "../Frameworks/MacRuby.framework/Versions/Current/usr/lib/ruby/1.9.0")
+$:.unshift(BUNDLED_STDLIB_PATH)
+
 # Loading the Cocoa framework. If you need to load more frameworks, you can
 # do that here too.
 framework "Cocoa"
