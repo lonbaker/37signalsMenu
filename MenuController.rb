@@ -54,7 +54,7 @@ class MenuController
   
   def startLoadingJournalStatus
     @journalStatus = JournalStatus.resourceWithDelegate(self)
-    @journalStatus.userID = identity.userID
+    @journalStatus.identity = identity
     @journalStatus.load
   end
   
@@ -103,10 +103,12 @@ class MenuController
   def updateStatusView
     if journalStatus.in?
       statusTextField.enabled = true
-      statusManipulationView.frameSize = [300, 88]
+      statusTextField.hidden = false
+      statusManipulationView.frameSize = NSMakeSize(300, 72)
     else
       statusTextField.enabled = false
-      statusManipulationView.frameSize = [300, 22]
+      statusTextField.hidden = true
+      statusManipulationView.frameSize = NSMakeSize(300, 18)
     end
     
     statusMenuItem.view = statusManipulationView

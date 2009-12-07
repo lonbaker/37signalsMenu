@@ -1,7 +1,8 @@
 class JournalStatus < BackpackResource
   OUT_PATTERN = /^\[?out\]?\s*\(?(.*?)\)?$/i
 
-  attr_accessor :userID
+  attr_accessor :identity
+  
   attribute :message
 
   def self.attributesFromXmlSimple(xml)
@@ -46,7 +47,7 @@ class JournalStatus < BackpackResource
   end
 
   def location
-    "users/#{userID}/status.xml"
+    "users/#{identity.userID}/status.xml"
   end
   
   def methodForSave
